@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website Tet</title>
+  <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container bg-secondary"> <br>
+    <h1 class="text-light text-center">Chroma Kids English Dictionary</h1> <br>
+    <hr>
+    <div class="col">
+      <div class="container text-center text-light">
+        <div class="col">
+          <h1>Search Result</h1>
+        </div>
+        <div class="col">
+          <a href="/" class="btn btn-primary">Done</a>
+        </div>
+        <br>
+      </div>
+      <div class="card" style="height: 62vmin;">
+
+
+        <% if (typeof keyToSearch !=='undefined' && Array.isArray(value)) { %>
+          <h3 class="text-center text-sucess">Word : <%= keyToSearch %></h3>
+          <ol>
+            <% value.forEach(function(item) { %>
+              <li>
+                <%= item %>
+              </li>
+              <% }); %>
+                <ol>
+                  <% } else if (typeof keyToSearch !=='undefined' && typeof value !=='undefined' ) { %>
+                    <p>Key: <%= keyToSearch %>
+                    </p>
+                    <ul>
+                      <li>
+                        <%= value %>
+                      </li>
+                    </ul>
+                    <% } else { %>
+                      <h1 class="text-center text-danger">Word not found</h1>
+                      <% } %>
+
+                        <br>
+
+      </div>
+    </div>
+
+    <br>
+  </div>
+
+
+</body>
+
+</html>
